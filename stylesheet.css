@@ -1,0 +1,596 @@
+
+
+body{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background:#181818;
+    overflow-x: hidden;
+  }
+
+
+
+
+
+
+
+.container {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    display: flex;
+    margin: auto;
+    aspect-ratio: 16/9;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1em;
+
+    width: 75%;
+    max-width: 95%;
+  }
+  
+  .card-container {
+    filter: drop-shadow(46px 36px 24px #4090b5) drop-shadow(-55px -40px 25px #9e30a9);
+    animation: blinkShadowsFilter 8s ease-in infinite;
+  }
+  
+  .card-content {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    grid-template-rows: 0.1fr 0.7fr 0.25fr;
+    background-color: hsl(296, 59%, 10%);
+    width: 15em;
+    aspect-ratio: 9/16;
+    -webkit-clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+    clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+  }
+  
+  .card-content::before {
+    content: "";
+    position: absolute;
+    width: 250%;
+    aspect-ratio: 1/1;
+    transform-origin: center;
+    background: linear-gradient(to bottom, transparent, transparent, #66e0ff, #66e0ff, #e366ff, #e366ff, transparent, transparent), linear-gradient(to left, transparent, transparent, #66e0ff, #66e0ff, #e366ff, #e366ff, transparent, transparent);
+    animation: rotate 5s infinite linear;
+  }
+  
+  .card-content::after {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 98%;
+    height: 98%;
+    background: repeating-linear-gradient(to bottom, transparent 0%, rgba(64, 144, 181, 0.6) 1px, rgb(0, 0, 0) 3px, rgba(64, 144, 181, 0.3019607843) 5px, #153544 4px, transparent 0.5%), repeating-linear-gradient(to left, hsl(295, 60%, 12%) 100%, hsla(295, 60%, 12%, 0.99) 100%);
+    box-shadow: inset 0px 0px 30px 40px hsl(296, 59%, 10%);
+    -webkit-clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+    clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+    animation: backglitch 94ms linear infinite;
+  }
+  
+  .card-title {
+    z-index: 80;
+    -webkit-clip-path: polygon(90% 0, 100% 100%, 0% 100%, 0% 0%);
+    clip-path: polygon(90% 0, 100% 100%, 0% 100%, 0% 0%);
+    background: linear-gradient(90deg, rgba(255, 254, 250, 0) 0%, rgba(102, 224, 255, 0.3) 27%, rgba(102, 224, 255, 0.3) 63%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(102, 224, 255, 0.3) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 96%, rgba(102, 224, 255, 0.3) 100%);
+    width: 98%;
+    font-size: 1.2em;
+  }
+  
+  .title {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    position: relative;
+    z-index: 2;
+    color: hsl(192, 100%, 88%);
+    font-size: 1em;
+    transition: all ease-in-out 2s linear;
+  }
+
+
+  .card-body {
+    padding-block: 1.5em;
+    padding-inline: 1em;
+    z-index: 80;
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .svg-card {
+    text-decoration: none;
+    color: hsl(192, 100%, 88%);
+    background: linear-gradient(90deg, transparent 0%, rgba(102, 224, 255, 0.2) 27%, rgba(102, 224, 255, 0.2) 63%, transparent 100%);
+    fill: currentColor;
+    width: 2em;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
+  
+  .svg-card .face {
+    width: 0.7em;
+  }
+  
+  .svg-card .twit {
+    width: 1em;
+  }
+  
+  .svg-card .insta {
+    width: 1em;
+  }
+  
+  .svg-card .whats {
+    width: 1.1em;
+  }
+  
+  .svg-card:hover {
+    cursor: pointer;
+    color: hsl(192, 100%, 100%);
+  }
+  
+  .card-footer {
+    padding-inline: 1em;
+  }
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  .btncontainer {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: grid;
+    gap: 2em;
+    place-content: center;
+    width: 400px;
+    max-width: 95%;
+  }
+  
+  .btncontainer input[type=radio] {
+    display: none;
+    max-width: 95%;
+  }
+  
+  .input-btn:is(:checked) + .neon-btn .span {
+    inset: 2px;
+    background-color: #4090b5;
+    background: repeating-linear-gradient(to bottom, transparent 0%, #4090b5 1px, #4090b5 3px, #4090b5 5px, #4090b5 4px, transparent 0.5%), repeating-linear-gradient(to left, hsl(295, 60%, 12%) 100%, hsl(295, 60%, 12%) 100%);
+    box-shadow: inset 0 40px 20px hsl(296, 59%, 10%);
+  }
+  
+  .input-btn:is(:checked) + .neon-btn .txt {
+    text-shadow: 2px 4px 1px #9e30a9, 2px 2px 1px #4090b5, 0 0 20px rgba(255, 255, 255, 0.616);
+    color: rgb(255, 255, 255);
+    animation: colorchange 0.3s ease;
+  }
+  
+  .input-btn:is(:checked) + .neon-btn::before {
+    animation-duration: 0.6s;
+  }
+  
+  .input-btn:is(:checked) + .neon-btn::after {
+    animation-duration: 0.6s;
+  }
+  
+  .neon-btn {
+    width: 300px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 5em;
+    text-align: right;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+    -webkit-clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+    clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+  }
+  
+  .neon-btn .span {
+    display: flex;
+    -webkit-clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+    clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+    position: absolute;
+    inset: 1px;
+    background-color: #212121;
+    z-index: 1;
+  }
+  
+  .neon-btn .txt {
+    text-align: right;
+    position: relative;
+    z-index: 2;
+    color: aliceblue;
+    font-size: 1em;
+    transition: all ease-in-out 2s linear;
+    text-shadow: 0px 0px 1px #4090b5, 0px 0px 1px #9e30a9, 0 0 1px white;
+  }
+  
+  .neon-btn::before {
+    content: "";
+    position: absolute;
+    height: 300px;
+    aspect-ratio: 1.5/1;
+    box-shadow: -17px -19px 20px #9e30a9;
+    background-image: conic-gradient(#9e30a9, transparent, transparent, transparent, transparent, transparent, transparent, #9e30a9);
+    animation: rotate 4s linear infinite -2s;
+  }
+  
+  .neon-btn::after {
+    content: "";
+    position: absolute;
+    height: 300px;
+    aspect-ratio: 1.5/1;
+    box-shadow: -17px -19px 10px #4090b5;
+    background-image: conic-gradient(#4090b5, transparent, transparent, transparent, transparent, transparent, transparent, transparent, #4090b5);
+    animation: rotate 4s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes colorchange {
+    0% {
+      text-shadow: 0px 0px 0px #9e30a9, 0px 0px 0px #4090b5, 0 0 0px rgba(255, 255, 255, 0.616);
+    }
+  
+    50% {
+      text-shadow: -6px 5px 1px #9e30a9, 5px 11px 1px #4090b5, 0 0 20px rgba(255, 255, 255, 0.616);
+    }
+  
+    to {
+      text-shadow: 2px 4px 1px #9e30a9, 2px 2px 1px #4090b5, 0 0 20px rgba(255, 255, 255, 0.616);
+    }
+  }
+  
+  @keyframes backgroundchange {
+    0% {
+      background-color: transparent;
+    }
+  
+    50% {
+      background-color: #4090b5;
+    }
+  
+    to {
+      background-color: transparent;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .btncontainer1 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: grid;
+    gap: 2em;
+    place-content: center;
+    width: 400px;
+    max-width: 95%;
+    pointer-events: none;
+  }
+  
+  .btncontainer1 input[type=radio] {
+    display: none;
+    pointer-events: none;
+    max-width: 95%;
+  }
+  
+  .input-btn:is(:checked) + .neon-btn .span {
+    inset: 2px;
+    background-color: #4090b5;
+    background: repeating-linear-gradient(to bottom, transparent 0%, #4090b5 1px, #4090b5 3px, #4090b5 5px, #4090b5 4px, transparent 0.5%), repeating-linear-gradient(to left, hsl(295, 60%, 12%) 100%, hsl(295, 60%, 12%) 100%);
+    box-shadow: inset 0 40px 20px hsl(296, 59%, 10%);
+  }
+  
+  .input-btn:is(:checked) + .neon-btn .txt {
+    text-shadow: 2px 4px 1px #9e30a9, 2px 2px 1px #4090b5, 0 0 20px rgba(255, 255, 255, 0.616);
+    color: rgb(255, 255, 255);
+    animation: colorchange 0.3s ease;
+  }
+  
+  .input-btn:is(:checked) + .neon-btn::before {
+    animation-duration: 0.6s;
+  }
+  
+  .input-btn:is(:checked) + .neon-btn::after {
+    animation-duration: 0.6s;
+  }
+  
+  .neon-btn {
+    width: 300px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 5em;
+    text-align: right;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+    -webkit-clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+    clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+  }
+  
+  .neon-btn .span {
+    display: flex;
+    -webkit-clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+    clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+    position: absolute;
+    inset: 1px;
+    background-color: #212121;
+    z-index: 1;
+  }
+  
+  .neon-btn .txt {
+    text-align: right;
+    position: relative;
+    z-index: 2;
+    color: aliceblue;
+    font-size: 1em;
+    transition: all ease-in-out 2s linear;
+    text-shadow: 0px 0px 1px #4090b5, 0px 0px 1px #9e30a9, 0 0 1px white;
+  }
+  
+  .neon-btn::before {
+    content: "";
+    position: absolute;
+    height: 300px;
+    aspect-ratio: 1.5/1;
+    box-shadow: -17px -19px 20px #9e30a9;
+    background-image: conic-gradient(#9e30a9, transparent, transparent, transparent, transparent, transparent, transparent, #9e30a9);
+    animation: rotate 4s linear infinite -2s;
+  }
+  
+  .neon-btn::after {
+    content: "";
+    position: absolute;
+    height: 300px;
+    aspect-ratio: 1.5/1;
+    box-shadow: -17px -19px 10px #4090b5;
+    background-image: conic-gradient(#4090b5, transparent, transparent, transparent, transparent, transparent, transparent, transparent, #4090b5);
+    animation: rotate 4s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes colorchange {
+    0% {
+      text-shadow: 0px 0px 0px #9e30a9, 0px 0px 0px #4090b5, 0 0 0px rgba(255, 255, 255, 0.616);
+    }
+  
+    50% {
+      text-shadow: -6px 5px 1px #9e30a9, 5px 11px 1px #4090b5, 0 0 20px rgba(255, 255, 255, 0.616);
+    }
+  
+    to {
+      text-shadow: 2px 4px 1px #9e30a9, 2px 2px 1px #4090b5, 0 0 20px rgba(255, 255, 255, 0.616);
+    }
+  }
+  
+  @keyframes backgroundchange {
+    0% {
+      background-color: transparent;
+    }
+  
+    50% {
+      background-color: #4090b5;
+    }
+  
+    to {
+      background-color: transparent;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .button1 {
+    margin: 15px;
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    touch-action: manipulation;
+    text-decoration: none;
+  }
+  
+  .button1:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #9930a7,
+      #86c0ff
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button1:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
