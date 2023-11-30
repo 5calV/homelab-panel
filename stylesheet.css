@@ -421,7 +421,12 @@ body{
     max-height: 100%;
     border-radius: 20px;
     display: block; /* Add display: block; to handle potential spacing issues */
-}
+    position: absolute; /* or absolute, adjust as needed */
+
+    z-index: 2; /* Ensure a higher z-index */
+  }
+  
+
 
 .card h2 {
     z-index: 1;
@@ -441,6 +446,8 @@ body{
     height: 130%;
     animation: rotBGimg 3s linear infinite;
     transition: all 0.2s linear;
+
+    z-index: 1; /* Adjust as needed */
   }
   
   @keyframes rotBGimg {
@@ -457,9 +464,10 @@ body{
     content: '';
     position: absolute;
     background: #07182E;
-    ;
     inset: 5px;
     border-radius: 15px;
+
+    z-index: 1; /* Adjust as needed */
   }  
   /* .card:hover:before {
     background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
