@@ -404,10 +404,6 @@ body{
 
 
 
-
-
-
-
   .card {
     width: 190px;
     height: 254px;
@@ -424,12 +420,17 @@ body{
     max-width: 100%;
     max-height: 100%;
     border-radius: 20px;
+    display: block; /* Add display: block; to handle potential spacing issues */
 }
 
 .card h2 {
     z-index: 1;
     color: white;
     font-size: 2em;
+    position: absolute; /* Position the title absolutely within the card */
+    bottom: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
 }
   
   .card::before {
