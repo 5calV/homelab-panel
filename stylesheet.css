@@ -439,18 +439,18 @@ body{
     z-index: 1;
     color: white;
     font-size: 2em;
-    position: absolute; /* Position the title absolutely within the card */
-    bottom: 10px; /* Adjust as needed */
+    position: absolute;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
-  
+
   .card::before {
     content: '';
     position: absolute;
     width: 100px;
     background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
-    height: 500px;
+    height: 450px;
     animation: rotBGimg 2s linear infinite;
     transition: all 0.2s linear;
 
