@@ -2,6 +2,8 @@
 This is a web-panel written in plain HTML /CSS to quickly access all 
 of your selfhosted webapps or favorite sites
 
+## THIS IS STILL IN DEVELOPMENT AND NOT FINISHED
+
 ## Use this for yourself
 
 To use this for yourself, you can clone this repository and put the files on 
