@@ -410,6 +410,7 @@ body{
     display: flex;
     align-items: center;
     border-radius: 20px;
+    border: #07182E 10px;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
@@ -420,8 +421,10 @@ body{
   width: 64px; /* Adjust the width as needed */
   height: auto;
   margin-bottom: 10px; /* Adjust the margin as needed */
-  border-radius: 20px;
   display: block;
+
+  margin: 6px;
+
   z-index: 2; /* Ensure a higher z-index */
 }
   
@@ -453,8 +456,9 @@ body{
     height: 450px;
     animation: rotBGimg 2s linear infinite;
     transition: all 0.2s linear;
-
-    z-index: 3; /* Adjust as needed */
+    top: -25%;
+    right: 25%;
+    z-index: 1; /* Adjust as needed ----------------------------------------------------*/
   }
   
   @keyframes rotBGimg {
