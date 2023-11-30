@@ -402,18 +402,16 @@ body{
 
 
 
-
-
   .card {
     width: 190px;
     height: 254px;
     background: #07182E;
     position: relative;
     display: flex;
-    place-content: center;
-    place-items: center;
-    overflow: hidden;
+    align-items: center;
+    justify-content: center;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .card img {
