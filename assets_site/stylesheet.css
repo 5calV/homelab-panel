@@ -427,7 +427,17 @@ body{
 
   z-index: 2; /* Ensure a higher z-index */
 }
-  
+
+.card a {
+  width: 64px; /* Adjust the width as needed */
+  height: auto;
+  margin-bottom: 10px; /* Adjust the margin as needed */
+  display: block;
+
+  margin: 6px;
+
+  z-index: 2; /* Ensure a higher z-index */
+}
 
 
 
