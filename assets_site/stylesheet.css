@@ -397,49 +397,80 @@ body{
 
 
 
-
-
-
-
-
-  .card {
-    width: 230px;
-    height: 300px;
-    background: #07182E;
-    position: relative;
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    border: #07182E 10px;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.card img {
-  width: 64px; /* Adjust the width as needed */
-  height: auto;
-  margin-bottom: 10px; /* Adjust the margin as needed */
-  display: block;
-
-  margin: 6px;
-
-  z-index: 2; /* Ensure a higher z-index */
-}
-
-.card a {
-  width: 64px; /* Adjust the width as needed */
-  height: auto;
-  margin-bottom: 10px; /* Adjust the margin as needed */
-  display: block;
-
-  margin: 6px;
-
-  z-index: 2; /* Ensure a higher z-index */
-}
-
-
+    .card {
+      width: 250px;
+      height: 300px;
+      background: #07182E;
+      position: relative;
+      display: flex;
+      align-items: center;
+      border-radius: 20px;
+      border: #07182E 10px;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  
+  .card img {
+    width: 64px; /* Adjust the width as needed */
+    height: auto;
+    display: block;
+    margin: 0
+    z-index: 2; /* Ensure a higher z-index */
+  }
+  
+  .card a {
+    width: 64px; /* Adjust the width as needed */
+    height: auto;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+    display: block;
+    margin: 9px;
+    z-index: 2; /* Ensure a higher z-index */
+  }
+  
+  .card h2 {
+      z-index: 1;
+      color: white;
+      font-size: 2em;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  
+    .card::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+      height: 450px;
+      animation: rotBGimg 2s linear infinite;
+      transition: all 0.2s linear;
+      top: -25%;
+      right: 25%;
+      z-index: 1; /* Adjust as needed ----------------------------------------------------*/
+    }
+    
+    @keyframes rotBGimg {
+      from {
+        transform: rotate(0deg);
+      }
+    
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .card::after {
+      content: '';
+      position: absolute;
+      background: #07182E;
+      inset: 5px;
+      border-radius: 10px;
+  
+      z-index: 1; /* Adjust as needed */
+    }  
 
 
 
