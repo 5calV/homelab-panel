@@ -1,5 +1,5 @@
 # homelab-panel
-This is a web-panel written in plain HTML /CSS to quickly access all 
+This is a web-panel written in plain HTML / CSS to quickly access all 
 of your selfhosted webapps or favorite sites
 
 ## Use this for yourself
