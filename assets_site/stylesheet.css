@@ -398,7 +398,7 @@ body{
 
 .card {
   width: 250px;
-  height: 400px; /* Adjust the height as needed */
+  height: 300px; /* Adjust the height as needed */
   background: #07182E;
   position: relative;
   display: flex;
